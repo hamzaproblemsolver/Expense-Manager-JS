@@ -78,7 +78,7 @@ router.post('/signup', function (req, res, next) {
                             html:    'Your OTP is <b>'+token+'</b>. Use this to verify your account. This is valid only for <b>3 hours</b>.'
                         });
                         send();
-                        return res.render('accounts/profile', { user: user });
+                        return res.render('accounts/otp', { user: user });
                     });
                 });
             }
