@@ -3,7 +3,6 @@ const passport = require('../config/passport');
 const speakeasy = require("speakeasy");
 const config = require('../config/config');
 const User = require('../models/users');
-const tsv = require('tsv');
 
 function checkLoggedIn(req, res, next) {
     if (req.user) {
