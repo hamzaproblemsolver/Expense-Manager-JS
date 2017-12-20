@@ -22,12 +22,21 @@
                     <div class="col-sm-3">
                         <span style="font-size: x-large">Budget:</span>
                     </div>
+                    <% if(user.budget==undefined) { %>
+                    <div class="col-sm-7">
+                        <div class="input-group mb-2 mb-sm-0">
+                            <div class="input-group-addon">Rs.</div>
+                            <input type="text" class="form-control" id="budget" name="budget" value="0">
+                        </div>
+                    </div>
+                    <% } else { %>
                     <div class="col-sm-7">
                         <div class="input-group mb-2 mb-sm-0">
                             <div class="input-group-addon">Rs.</div>
                             <input type="text" class="form-control" id="budget" name="budget" value="<%= user.budget%>">
                         </div>
                     </div>
+                    <% } %>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
