@@ -39,10 +39,10 @@ UserSchema.pre('save', function (next) {
 UserSchema.methods.setMonth = function () {
     let user = this;
     if(user.currentMonth[0]) {
-        if (user.currentMonth[0].getMonth() < new Date().getMonth() || (user.currentMonth[0].getMonth() == 11 && 0 >= new Date().getMonth())) {
+        if (user.currentMonth[0].date.getMonth() < new Date().getMonth() || (user.currentMonth[0].date.getMonth() == 11 && 0 >= new Date().getMonth())) {
             user.previousMonth = user.currentMonth;
             user.currentMonth = [];
-            if(user.currentMonth[0].getMonth() + 1 < new Date().getMonth() || (user.currentMonth[0].getMonth() == 11 && 0 > new Date().getMonth()) || user.currentMonth[0].getFullYear() < new Date().getFullYear()){
+            if(user.currentMonth[0].date.getMonth() + 1 < new Date().getMonth() || (user.currentMonth[0].date.getMonth() == 11 && 0 > new Date().getMonth()) || user.currentMonth[0].date.getFullYear() < new Date().getFullYear()){
                 user.previousMonth = [];
             }
             user.save(function (err) {

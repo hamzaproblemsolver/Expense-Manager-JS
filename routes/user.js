@@ -191,12 +191,18 @@ router.get('/graphsData', function (req, res, next) {
         if(err) return next(err);
 
         let obj1={},obj2={};
+        let obj3={},obj4={};
 
         user.previousMonth.map(function (obj) {
             if(obj1.hasOwnProperty(obj.date.getDate())){
                 obj1[obj.date.getDate()]+=obj.amount;
             } else {
                 obj1[obj.date.getDate()]=obj.amount;
+            }
+            if(obj3.hasOwnProperty(obj.category)){
+                obj3[obj.category]+=obj.amount;
+            } else {
+                obj3[obj.category]=obj.amount;
             }
         });
 
@@ -205,6 +211,11 @@ router.get('/graphsData', function (req, res, next) {
                 obj2[obj.date.getDate()]+=parseInt(obj.amount);
             } else {
                 obj2[obj.date.getDate()]=parseInt(obj.amount);
+            }
+            if(obj4.hasOwnProperty(obj.category)){
+                obj4[obj.category]+=parseInt(obj.amount);
+            } else {
+                obj4[obj.category]=parseInt(obj.amount);
             }
         });
 
@@ -222,6 +233,18 @@ router.get('/graphsData', function (req, res, next) {
             sum+=obj1[i];
             y1.push(sum);
         }
+
+        let x3 = Object.keys(obj3);
+        let y3 = [];
+        for(let i of x3){
+            y3.push(obj3[i]);
+        }
+        let x4 = Object.keys(obj4);
+        let y4 = [];
+        for(let i of x4){
+            y4.push(obj4[i]);
+        }
+
         var monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         ];
@@ -240,7 +263,11 @@ router.get('/graphsData', function (req, res, next) {
             y2 : y2,
             budget : user.budget,
             m1 : month1,
-            m2 : month2
+            m2 : month2,
+            x3 : x3,
+            x4 : x4,
+            y3 : y3,
+            y4 : y4
         });
     });
 });
