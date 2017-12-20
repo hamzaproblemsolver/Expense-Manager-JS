@@ -1,0 +1,75 @@
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Expense Manager</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+                <%if(!user){%>
+                <li><a href="/signup">Sign Up</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div style="margin-bottom: 10px">
+                                        Login via
+                                    </div>
+
+                                    <div>
+                                        <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook">
+                                            <span class="fa fa-facebook"></span> Facebook
+                                        </a>
+                                        <a class="btn btn-block btn-social btn-google" href="/auth/google">
+                                            <span class="fa fa-google"></span> Google
+                                        </a>
+                                    </div>
+                                    <div style="margin: 10px 0">
+                                        or
+                                    </div>
+                                    <form class="form" role="form" method="post" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bottom text-center">
+                                    New here ? <a href="/signup"><b>Join Us</b></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <%} else {%>
+                <li><a href="/add">Add expense</a></li>
+                <li><a href="/stats">Statistics</a></li>
+
+                <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"><img class="img-circle img-center" src="<%= user.profile.picture%>" alt="Avatar" style="max-height: 25px;display: inline-block;">&nbsp;<span style="font-weight: bold;"><%=user.profile.name%></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</nav>

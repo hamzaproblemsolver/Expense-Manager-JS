@@ -1,0 +1,39 @@
+<% layout('layout') %>
+
+<link rel="stylesheet" href="/css/landing.css">
+
+<div class="container-fluid site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <img class="img-circle img-responsive img-center center-block" src="<%= user.profile.picture%>" alt="Avatar">
+                </div>
+                <div class="col-md-12 offset-md-2 col-sm-12 profile_data" style="font-size: large;margin: 50px 0">
+                    <p><span style="font-weight: bold">Name : </span><%= user.profile.name%></p>
+                    <p><span style="font-weight: bold">E-mail : </span><%= user.email%></p>
+                </div>
+            </div>
+            <form method="post" action="/setBudget">
+                <div class="form-row align-items-center">
+                    <div class="col-sm-3">
+                        <span style="font-size: x-large">Budget:</span>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="input-group mb-2 mb-sm-0">
+                            <div class="input-group-addon">Rs.</div>
+                            <input type="text" class="form-control" id="budget" name="budget" value="<%= user.budget%>">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
