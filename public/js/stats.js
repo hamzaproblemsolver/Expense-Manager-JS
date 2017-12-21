@@ -43,14 +43,24 @@ $(function () {
             height: h/2*0.9,
             width: w*0.7
         };
-
         Plotly.newPlot('graph1', graphData, layout);
 
+
+
+
+
+
+
+
         if(data["x3"].length>0 && data["x4"].length>0){
+
             var chartData = [{
                 values: data["y3"],
                 labels: data["x3"],
-                name: 'Previous Month',
+                domain: {
+                    x: [0, .48]
+                },
+                name: 'GHG Emissions',
                 hoverinfo: 'label+percent+name',
                 hole: .4,
                 type: 'pie'
@@ -59,11 +69,13 @@ $(function () {
                 labels: data["x4"],
                 text: 'CO2',
                 textposition: 'inside',
-                name: 'This Month',
+                domain: {x: [.52, 1]},
+                name: 'CO2 Emissions',
                 hoverinfo: 'label+percent+name',
                 hole: .4,
                 type: 'pie'
             }];
+
 
             var layout1 = {
                 title: 'Category-wise Expenditure',
@@ -74,7 +86,7 @@ $(function () {
                         },
                         showarrow: false,
                         text: 'Previous Month',
-                        x: 0.215,
+                        x: 0.175,
                         y: -0.25
                     },
                     {
@@ -91,6 +103,14 @@ $(function () {
                 width: w*0.7
             };
             Plotly.newPlot('chart', chartData, layout1);
+
+
+
+
+
+
+
+
         } else if(data["x3"].length>0){
             var chartData = [{
                 values: data["y3"],

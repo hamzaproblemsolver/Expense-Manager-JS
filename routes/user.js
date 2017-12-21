@@ -195,15 +195,16 @@ router.get('/graphsData', function (req, res, next) {
 
         user.previousMonth.map(function (obj) {
             if(obj1.hasOwnProperty(obj.date.getDate())){
-                obj1[obj.date.getDate()]+=obj.amount;
+                obj1[obj.date.getDate()]+=parseInt(obj.amount);
             } else {
-                obj1[obj.date.getDate()]=obj.amount;
+                obj1[obj.date.getDate()]=parseInt(obj.amount);
             }
             if(obj3.hasOwnProperty(obj.category)){
-                obj3[obj.category]+=obj.amount;
+                obj3[obj.category]+=parseInt(obj.amount);
             } else {
-                obj3[obj.category]=obj.amount;
+                obj3[obj.category]=parseInt(obj.amount);
             }
+            // console.log(obj);
         });
 
         user.currentMonth.map(function (obj) {
@@ -218,6 +219,9 @@ router.get('/graphsData', function (req, res, next) {
                 obj4[obj.category]=parseInt(obj.amount);
             }
         });
+        // console.log(user.previousMonth);
+        // console.log(obj1);
+        // console.log(obj3);
 
         let sum=0;
         let x2 = Object.keys(obj2).sort(function(a, b){return parseInt(a)-parseInt(b)});
@@ -226,7 +230,7 @@ router.get('/graphsData', function (req, res, next) {
             sum+=obj2[i];
             y2.push(sum);
         }
-
+        sum=0;
         let x1 = Object.keys(obj1).sort(function(a, b){return parseInt(a)-parseInt(b)});
         let y1 = [];
         for(let i of x1){
@@ -252,6 +256,9 @@ router.get('/graphsData', function (req, res, next) {
         if(user.previousMonth[0]){
             month1=monthNames[user.previousMonth[0].date.getMonth()]+" "+user.previousMonth[0].date.getFullYear();
         }
+        // console.log(user.previousMonth[0]);
+        // console.log("CURRENT");
+        // console.log(user.currentMonth[0]);
         if(user.currentMonth[0]){
             month2=monthNames[user.currentMonth[0].date.getMonth()]+" "+user.currentMonth[0].date.getFullYear();
         }
@@ -294,6 +301,28 @@ router.post('/add',function (req, res, next) {
         });
     });
 });
+
+// router.get('/previous',function (req, res, next) {
+//     let array = [{"date":"2017-11-01","category":"Food and Drinks","amount":"30"},{"date":"2017-11-03","category":"Food and Drinks","amount":"300"},{"date":"2017-11-10","category":"Food and Drinks","amount":"50"},{"date":"2017-11-15","category":"Food and Drinks","amount":"550"},{"date":"2017-11-19","category":"Food and Drinks","amount":"100"},{"date":"2017-11-01","category":"Health","amount":"1250"},{"date":"2017-11-02","category":"Leisure","amount":"100"},{"date":"2017-11-06","category":"Leisure","amount":"125"},{"date":"2017-11-13","category":"Transportation","amount":"400"},{"date":"2017-11-20","category":"Others","amount":"500"},{"date":"2017-11-09","category":"Food and Drinks","amount":"325"}];
+//
+//
+//     User.findOne({email : req.user.email}, function (err, user) {
+//         if(err) return next(err);
+//         for(var i=0;i<array.length;i++){
+//             console.log(array[i]);
+//             user.previousMonth.push({
+//                 date : new Date(array[i]["date"]),
+//                 category : array[i]["category"],
+//                 amount : array[i]["amount"]
+//             });
+//         }
+//         user.save(function (err) {
+//             if(err) next(err);
+//         });
+//     });
+//
+//     res.json("SUCCESS");
+// });
 
 router.get('/logout', function(req, res){
     req.logout();
