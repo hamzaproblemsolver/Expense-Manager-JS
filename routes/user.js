@@ -12,6 +12,10 @@ function checkLoggedIn(req, res, next) {
     }
 }
 
+router.get('/privacypolicy', function (req, res, next) {
+   res.render('mains/privacy');
+});
+
 router.get('/login',function (req, res) {
     if(req.user) return res.redirect('/');
     res.render('accounts/login',{message : req.flash('loginMessage')});
