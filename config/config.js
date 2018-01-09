@@ -17,7 +17,7 @@ module.exports = {
     },
 
     mailing :{
-        from : "<from>",
-        password : "<password>"
+        from : "develop.bagri98@gmail.com",
+        password : "jaibhagwan"
     }
 }
