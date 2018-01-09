@@ -1,5 +1,4 @@
 const express = require('express');
-const morgan = require('morgan');
 const bp = require('body-parser');
 const ejs = require('ejs');
 const engine = require('ejs-mate');
@@ -25,7 +24,6 @@ const app = express();
 
 app.use('/',express.static(path.join(__dirname,"public")));
 
-app.use(morgan('dev'));
 app.use(bp.json());
 app.use(bp.urlencoded({extended : true}));
 
