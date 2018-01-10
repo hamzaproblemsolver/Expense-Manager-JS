@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="75bca6d4-6192-4e3d-bbf6-869c8a1a3fa8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/addExpense.js" afterPath="$PROJECT_DIR$/public/js/addExpense.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/accounts/addExpense.ejs" afterPath="$PROJECT_DIR$/views/accounts/addExpense.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,18 +21,8 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stats.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/stats.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="88" column="32" lean-forward="false" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,18 +31,28 @@
       <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
+            <state relative-caret-position="-717">
               <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/users.js">
+      <file leaf-file-name="addExpense.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/addExpense.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="43" column="230" lean-forward="false" selection-start-line="43" selection-start-column="230" selection-end-line="43" selection-end-column="230" />
+            <state relative-caret-position="108">
+              <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addExpense.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/accounts/addExpense.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -60,8 +61,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="216">
+              <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -70,8 +71,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="162">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -87,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="privacy.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="privacy.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/mains/privacy.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -110,7 +111,7 @@
       <file leaf-file-name="navbar.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="792">
               <caret line="44" column="64" lean-forward="false" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
               <folding />
             </state>
@@ -170,8 +171,6 @@
         <option value="$PROJECT_DIR$/views/accounts/login.ejs" />
         <option value="$PROJECT_DIR$/public/js/signup.js" />
         <option value="$PROJECT_DIR$/views/mains/home.ejs" />
-        <option value="$PROJECT_DIR$/public/js/addExpense.js" />
-        <option value="$PROJECT_DIR$/views/accounts/addExpense.ejs" />
         <option value="$PROJECT_DIR$/public/css/stats.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -188,6 +187,8 @@
         <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/views/mains/privacy.ejs" />
+        <option value="$PROJECT_DIR$/views/accounts/addExpense.ejs" />
+        <option value="$PROJECT_DIR$/public/js/addExpense.js" />
       </list>
     </option>
   </component>
@@ -208,9 +209,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="32" />
-    <option name="width" value="1853" />
+    <option name="x" value="992" />
+    <option name="y" value="-4" />
+    <option name="width" value="926" />
     <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -247,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -308,7 +310,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,16 +370,16 @@
       <workItem from="1513787618362" duration="6939000" />
       <workItem from="1513880972105" duration="5958000" />
       <workItem from="1515470473224" duration="1780000" />
-      <workItem from="1515510670941" duration="2115000" />
+      <workItem from="1515510670941" duration="2509000" />
+      <workItem from="1515566249068" duration="3694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72583000" />
+    <option name="totallyTimeSpent" value="76671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="32" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15136611" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -386,7 +387,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33982685" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33982685" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -613,25 +614,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/accounts/addExpense.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/public/css/stats.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/addExpense.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -686,34 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="43" column="230" lean-forward="false" selection-start-line="43" selection-start-column="230" selection-end-line="43" selection-end-column="230" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -734,17 +697,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="792">
           <caret line="44" column="64" lean-forward="false" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
           <folding />
         </state>
@@ -754,6 +709,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="86" lean-forward="false" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/accounts/addExpense.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-717">
+          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/addExpense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
