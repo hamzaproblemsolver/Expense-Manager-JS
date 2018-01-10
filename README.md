@@ -10,9 +10,6 @@ A simple to use Expense Manager for comparing your budget and monthly expenses.
     ##### $npm install
     ##### $node server
 5. Open Brower and visit http://localhost:4000/
-
-### Note : 
-    Third-party authentication works only on localhost.
     
 # DEMO :
 
