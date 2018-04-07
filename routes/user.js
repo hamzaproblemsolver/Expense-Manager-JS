@@ -190,6 +190,15 @@ router.get('/add',checkLoggedIn, function (req, res, next) {
     return res.render('mains/home');
 });
 
+router.get('/passbook', checkLoggedIn, function (req, res, next) {
+    User.findOne({email : req.user.email} ,function (err, user) {
+        if(err) return next(err);
+        return res.render('accounts/passbook', {
+            user : req.user
+        });
+    });
+});
+
 router.get('/graphsData', function (req, res, next) {
     User.findOne({email : req.user.email}, function (err, user) {
         if(err) return next(err);

@@ -44,6 +44,7 @@ passport.use(new facebookStrategy(config.facebook, function (token, refreshToken
             return done(err);
         if(user) {
             user = user.setMonth();
+            console.log(user.currentMonth);
             return done(null, user);
         }
         else{

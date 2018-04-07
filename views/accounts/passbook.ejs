@@ -1,0 +1,91 @@
+<% layout('layout')%>
+
+<link rel="stylesheet" href="/css/passbook.css">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 custyle">
+            <table class="table table-striped custab">
+                <% console.log("CURRENT");console.log(user.currentMonth[0].date.getMonth());console.log("THIRD");console.log(user.third[0].date.getMonth());%>
+                <%
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                ];
+                %>
+                <%if(user.currentMonth[0]){%>
+                <thead>
+                <span class="badge badge-dark" style="font-size: large;"><%= monthNames[user.currentMonth[0].date.getMonth()]%></span>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <% user.currentMonth.sort(function (a,b) {
+                    return a.date.getDate() - b.date.getDate();
+                })%>
+                <%for(var i=0;i<user.currentMonth.length;i++){%>
+                <tr>
+                    <td><%= parseInt(i)+1%></td>
+                    <td><%= user.currentMonth[i].category%></td>
+                    <td><%= user.currentMonth[i].date.getDate()+"/"+(user.currentMonth[i].date.getMonth()+1) +"/"+user.currentMonth[i].date.getFullYear()%></td>
+                    <td><%= user.currentMonth[i].amount%></td>
+                </tr>
+                <%}%>
+                <%}%>
+            </table>
+
+            <table class="table table-striped custab">
+                <%if(user.previousMonth[0]){%>
+                <thead>
+                <span class="badge badge-dark" style="font-size: large;"><%= monthNames[user.previousMonth[0].date.getMonth()]%></span>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <% user.previousMonth.sort(function (a,b) {
+                    return a.date.getDate() - b.date.getDate();
+                })%>
+                <%for(var i=0;i<user.previousMonth.length;i++){%>
+                <tr>
+                    <td><%= parseInt(i)+1%></td>
+                    <td><%= user.previousMonth[i].category%></td>
+                    <td><%= user.previousMonth[i].date.getDate()+"/"+(user.previousMonth[i].date.getMonth()+1)+"/"+user.previousMonth[i].date.getFullYear()%></td>
+                    <td><%= user.previousMonth[i].amount%></td>
+                </tr>
+                <%}%>
+                <%}%>
+            </table>
+
+            <table class="table table-striped custab">
+                <%if(user.third[0]){%>
+                <thead>
+                <span class="badge badge-dark" style="font-size: large;"><%= monthNames[user.third[0].date.getMonth()]%></span>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <% user.third.sort(function (a,b) {
+                    return a.date.getDate() - b.date.getDate();
+                })%>
+                <%for(var i=0;i<user.third.length;i++){%>
+                <tr>
+                    <td><%= parseInt(i)+1%></td>
+                    <td><%= user.third[i].category%></td>
+                    <td><%= user.third[i].date.getDate()+"/"+(user.third[i].date.getMonth()+1)+"/"+user.third[i].date.getFullYear()%></td>
+                    <td><%= user.third[i].amount%></td>
+                </tr>
+                <%}%>
+                <%}%>
+            </table>
+
+        </div>
+    </div>
+
+</div>

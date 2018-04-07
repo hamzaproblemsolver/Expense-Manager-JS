@@ -20,7 +20,8 @@ let UserSchema = new Schema({
     },
     budget : Number,
     currentMonth : Array,
-    previousMonth : Array
+    previousMonth : Array,
+    third : Array
 });
 
 UserSchema.pre('save', function (next) {
@@ -41,8 +42,13 @@ UserSchema.methods.setMonth = function () {
     if(user.currentMonth[0]) {
         if (user.currentMonth[0].date.getMonth() < new Date().getMonth() || (user.currentMonth[0].date.getMonth() == 11 && 0 <= new Date().getMonth() && 11 > new Date().getMonth())) {
             user.previousMonth = user.currentMonth;
+            user.third = user.previousMonth;
             if(user.currentMonth[0].date.getMonth() + 1 < new Date().getMonth() || (user.currentMonth[0].date.getMonth() == 11 && 0 < new Date().getMonth()) || user.currentMonth[0].date.getFullYear()+1 < new Date().getFullYear()){
+                user.third = user.previousMonth;
                 user.previousMonth = [];
+                if(user.currentMonth[0].date.getMonth() + 2 < new Date().getMonth() || (user.currentMonth[0].date.getMonth() == 11 && 1 < new Date().getMonth()) || user.currentMonth[0].date.getFullYear()+1 < new Date().getFullYear()){
+                    user.third = [];
+                }
             }
             user.currentMonth = [];
             user.save(function (err) {
